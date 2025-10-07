@@ -1,11 +1,10 @@
-/* Глобальный reset для предотвращения горизонтальной прокрутки */
 html {
   box-sizing: border-box;
-  overflow-x: hidden; /* Запрещаем горизонтальный скролл на html */
+  overflow-x: hidden; 
 }
 
 *, *::before, *::after {
-  box-sizing: inherit; /* Наследуем box-sizing для всех элементов */
+  box-sizing: inherit; 
 }
 
 body {
@@ -13,27 +12,24 @@ body {
   padding: 0;
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden; /* Запрещаем скролл на body */
-  font-family: 'Inter', sans-serif; /* Если используете шрифт из примера выше */
+  overflow-x: hidden; 
+  font-family: 'Raleway', sans-serif; 
 }
 
-/* Основной контейнер (адаптируйте под вашу структуру) */
 .element {
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  overflow-x: hidden; /* Если внутри есть overflowing элементы */
-  padding: 0; /* Удалите лишний padding, если он вызывает сдвиг */
+  overflow-x: hidden; 
+  padding: 0; 
 }
 
-/* Изображения: всегда responsive */
 img {
   max-width: 100%;
   height: auto;
-  display: block; /* Убирает лишние пробелы под img */
+  display: block; 
 }
 
-/* Контейнеры вроде header, cover, lots, footer */
 .header, .cover, .lots, .about, .footer {
   width: 100%;
   max-width: 100%;
@@ -41,39 +37,36 @@ img {
   box-sizing: border-box;
 }
 
-/* Лоты и флекс/грид: убедитесь, что они не выходят за пределы */
 .lots {
-  display: flex; /* Или grid, в зависимости от вашего CSS */
-  flex-wrap: wrap; /* Для мобильных — перенос на новую строку */
-  justify-content: space-between; /* Или center, чтобы не растягивать */
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-between; 
 }
 
 .lot, .frame, .lot-wrapper, .div-wrapper {
-  flex: 1 1 calc(33.333% - 20px); /* Пример для 3 колонок; на мобильных — 100% */
+  flex: 1 1 calc(33.333% - 20px); 
   max-width: calc(33.333% - 20px);
   margin: 10px;
   box-sizing: border-box;
-  overflow: hidden; /* Если внутри фото выходит */
+  overflow: hidden; 
 }
 
-@media (max-width: 768px) { /* Мобильные: минимальная ширина ~320px */
+@media (max-width: 768px) { 
   .lot, .frame, .lot-wrapper, .div-wrapper {
     flex: 1 1 100%;
     max-width: 100%;
     margin: 5px 0;
   }
   
-  /* Cover и title: адаптация для узких экранов */
   .cover {
-    padding: 0 10px; /* Не больше viewport */
+    padding: 0 10px; 
   }
   
   .title {
-    text-align: center; /* Чтобы текст не вылазил */
+    text-align: center;
   }
 }
 
-/* Кнопки и overlay: не выходят за границы */
 .button, .overlay, .overlay-2 {
   width: 100%;
   max-width: 100%;
