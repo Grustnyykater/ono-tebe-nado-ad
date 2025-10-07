@@ -1,26 +1,23 @@
-/* Глобальное применение Raleway без альтернатив */
+
 *,
 *::before,
 *::after {
-  font-family: 'Raleway', sans-serif; /* ВАЖНО: Удалите 'sans-serif' и другие fallback! Только 'Raleway' */
-  /* Если строго без fallback: font-family: 'Raleway'; */
+  font-family: 'Raleway', sans-serif; 
 }
 
 body {
-  font-family: 'Raleway'; /* Только Raleway, без fallback */
-  font-weight: 400; /* Regular по умолчанию */
-  line-height: 1.5; /* Стандартная высота строки */
-  /* Другие базовые стили... */
+  font-family: 'Raleway'; 
+  font-weight: 400; 
+  line-height: 1.5; 
+
 }
 
-/* Для жирного текста (если нужно) */
-h1, h2, .bold-text { /* Адаптируйте под ваши классы, например .title или .span */
+h1, h2, .bold-text { 
   font-family: 'Raleway';
-  font-weight: 700; /* Bold */
+  font-weight: 700; 
 }
 
-/* Убедитесь, что в style.css нет fallback */
 .header, .cover, .lots, .about, .footer,
 .text-wrapper, .span, .button {
-  font-family: 'Raleway'; /* Только Raleway */
+  font-family: 'Raleway'; 
 }
