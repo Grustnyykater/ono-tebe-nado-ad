@@ -1,23 +1,23 @@
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
 
-*,
-*::before,
-*::after {
-  font-family: 'Raleway', sans-serif; 
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 body {
-  font-family: 'Raleway'; 
-  font-weight: 400; 
-  line-height: 1.5; 
-
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: 'Raleway', sans-serif;
 }
 
-h1, h2, .bold-text { 
-  font-family: 'Raleway';
-  font-weight: 700; 
-}
-
-.header, .cover, .lots, .about, .footer,
-.text-wrapper, .span, .button {
-  font-family: 'Raleway'; 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
