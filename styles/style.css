@@ -1,74 +1,144 @@
-html {
-  box-sizing: border-box;
-  overflow-x: hidden; 
-}
-
-*, *::before, *::after {
-  box-sizing: inherit; 
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden; 
-  font-family: 'Raleway', sans-serif; 
-}
-
 .element {
-  width: 100%;
+  width: 1100px;
   max-width: 100%;
   margin: 0 auto;
-  overflow-x: hidden; 
-  padding: 0; 
-}
-
-img {
-  max-width: 100%;
+  padding: 0;
   height: auto;
-  display: block; 
+  box-sizing: border-box;
 }
 
-.header, .cover, .lots, .about, .footer {
+.header,
+.cover,
+.lots,
+.about,
+.footer {
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
   box-sizing: border-box;
+  height: auto;
+}
+
+.header {
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.cover {
+  height: 700px;
+  position: relative;
+  background-image: url('/images/cover.jpg'); 
+  background-size: cover;
+}
+
+.title {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .lots {
-  display: flex; 
-  flex-wrap: wrap; 
-  justify-content: space-between; 
+  height: auto;
+  min-height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 0;
 }
 
-.lot, .frame, .lot-wrapper, .div-wrapper {
-  flex: 1 1 calc(33.333% - 20px); 
-  max-width: calc(33.333% - 20px);
+.lot,
+.frame,
+.lot-wrapper,
+.div-wrapper {
+  width: 360px;
+  max-width: 360px;
+  height: 450px;
   margin: 10px;
   box-sizing: border-box;
-  overflow: hidden; 
+  overflow: hidden;
+  position: relative;
 }
 
-@media (max-width: 768px) { 
-  .lot, .frame, .lot-wrapper, .div-wrapper {
-    flex: 1 1 100%;
+.photo,
+.photo-2 {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.overlay,
+.overlay-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.button {
+  width: 200px;
+  height: 50px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.about {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.footer {
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  background: #000;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .element {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .lot,
+  .frame,
+  .lot-wrapper,
+  .div-wrapper {
+    width: 100%;
     max-width: 100%;
+    height: 400px;
     margin: 5px 0;
   }
-  
+
   .cover {
-    padding: 0 10px; 
+    height: 500px;
+    padding: 0 10px;
   }
-  
+
   .title {
+    height: 200px;
     text-align: center;
   }
-}
 
-.button, .overlay, .overlay-2 {
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
+  .header {
+    height: auto;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .footer {
+    height: auto;
+    flex-direction: column;
+    padding: 10px;
+  }
 }
