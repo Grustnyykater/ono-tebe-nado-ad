@@ -242,6 +242,9 @@
   width: 258px;
   height: 51px;
   position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
 }
 
 .element .rectangle {
@@ -252,6 +255,7 @@
   height: 51px;
   border: 1px solid;
   border-color: #ffffff;
+  display: block;
 }
 
 .element .text-wrapper-8 {
@@ -337,6 +341,9 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .element .text-wrapper-12 {
@@ -687,6 +694,7 @@
   letter-spacing: 0;
   line-height: 24.3px;
 }
+
 /* Original CSS code should be injected here */
 
 .element .header .menu a {
@@ -699,12 +707,6 @@
   color: inherit;
 }
 
-.element .button {
-  cursor: pointer;
-  text-decoration: none;
-  display: block;
-}
-
 .element .button:hover {
   opacity: 0.9;
 }
@@ -712,12 +714,6 @@
 .element .button:focus {
   outline: 2px solid #ffffff;
   outline-offset: 2px;
-}
-
-.element .more {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
 }
 
 .element .more:hover {
@@ -740,21 +736,4 @@
 }
 
 .element .menu a:focus,
-.element .menu-2 a:focus {
-  outline: 2px solid #4a90e2;
-  outline-offset: 2px;
-}
-
-.element .rectangle {
-  display: block;
-}
-
-.element .title {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.element .title span {
-  display: block;
-}
+.element .menu-2
